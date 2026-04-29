@@ -64,11 +64,11 @@ def gamestart():
             print(f"Your total now is {money}")
         elif len(duplicates)==1:
             print("You won!")
-            print("You won $"+betmoney)
+            print(f"You won $ {betmoney})
             print(f"Your total now is {money}")
         else:
             print("You lost...")
-            print("You lost $"+betmoney)
+            print(f"You lost $ {betmoney})
             money = money-betmoney
             print(f"Your total now is {money}")
         yn1 = ("Play again?(y/n)\n>")
