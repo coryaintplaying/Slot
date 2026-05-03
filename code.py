@@ -29,7 +29,6 @@ def gamestart():
           slot.insert(z,a)
           print(slot)
           times-=1
-          print("\n")
         """
         print(input("Spin (enter any key)?\n>"))
         times = random.randint(1,10)
@@ -65,11 +64,11 @@ def gamestart():
             print(f"Your total now is {money}")
         elif len(duplicates)==1:
             print("You won!")
-            print("You won $"+betmoney)
+            print(f"You won $ {betmoney})
             print(f"Your total now is {money}")
         else:
             print("You lost...")
-            print("You lost $"+betmoney)
+            print(f"You lost $ {betmoney})
             money = money-betmoney
             print(f"Your total now is {money}")
         yn1 = ("Play again?(y/n)\n>")
@@ -89,11 +88,11 @@ def bettingphase():
 
 def start():
     bettingphase()
-    yn = str(input(f"Confirm:${betmoney}?(y/n)\n>"))
-    if yn=="y":
+    yn = str(input(f"Confirm:${str(betmoney)}?(y/n)\n>"))
+    if yn.lower() =="y":
         print("Game starting, redirecting...")
         gamestart()
-    elif yn=="n":bettingphase()
+    elif yn.lower()=="n":start()
     
 print("Welcome to Slot")
 time.sleep(1)
